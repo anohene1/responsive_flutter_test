@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_flutter_test/conversation_widget.dart';
 
 class ChatsScreen extends StatefulWidget {
-  const ChatsScreen({Key? key}) : super(key: key);
+  ChatsScreen({Key? key, required this.profileIconColor}) : super(key: key);
+  final Color profileIconColor;
 
   @override
   _ChatsScreenState createState() => _ChatsScreenState();
@@ -12,7 +14,11 @@ class _ChatsScreenState extends State<ChatsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-        child: Text('Chats'),
+        child: ListView.builder(
+          itemCount: 15,
+            itemBuilder: (context, index) {
+          return PeopleItem();
+        })
       ),
     );
   }

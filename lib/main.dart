@@ -32,6 +32,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -39,9 +41,13 @@ class _MyHomePageState extends State<MyHomePage> {
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
           if (constraints.maxWidth < 600) {
-            return HomePageSmall();
+            return HomePageSmall(onTapped: (int selectedIndex) { setState(() {
+              currentIndex = selectedIndex;
+            }); }, currentIndex: currentIndex,);
           } else {
-            return HomePageLarge();
+            return HomePageLarge(onTapped: (int selectedIndex) { setState(() {
+              currentIndex = selectedIndex;
+            }); }, currentIndex: currentIndex,);
           }
         },
       ),

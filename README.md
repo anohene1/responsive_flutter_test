@@ -2,6 +2,20 @@
 
 A flutter project to play around with responsive layouts
 
+Code is very messy. This was just reckless trial and error lol
+
+## Screenshots
+<table>
+    <tr>
+        <td><img src="./bookmarks-large.png"></td>
+        <td><img src="./bookmarks-small.png"></td>
+    </tr>
+    <tr>
+        <td><img src="./chats-large.png"></td>
+        <td><img src="./chats-small.png"></td>
+    </tr>
+</table>
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
